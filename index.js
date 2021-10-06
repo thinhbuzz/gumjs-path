@@ -1485,10 +1485,6 @@ const _posix = {
 _posix.win32 = _win32.win32 = _win32;
 _posix.posix = _win32.posix = _posix;
 
-// Legacy internal API, docs-only deprecated: DEP0080
-_win32._makeLong = _win32.toNamespacedPath;
-_posix._makeLong = _posix.toNamespacedPath;
-
 const impl = platformIsWin32 ? _win32 : _posix;
 export default impl;
 export const {
