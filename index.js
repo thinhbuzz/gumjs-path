@@ -1489,7 +1489,7 @@ _posix.posix = _win32.posix = _posix;
 
 const impl = platformIsWin32 ? _win32 : _posix;
 export default impl;
-export const {
+const {
   resolve,
   normalize,
   isAbsolute,
@@ -1506,3 +1506,20 @@ export const {
   win32,
   posix,
 } = impl;
+export {
+  resolve,
+  normalize,
+  isAbsolute,
+  join,
+  relative,
+  toNamespacedPath,
+  dirname,
+  basename,
+  extname,
+  format,
+  parse,
+  sep,
+  delimiter,
+  win32,
+  posix,
+};
